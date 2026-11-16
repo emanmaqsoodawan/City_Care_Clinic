@@ -1,0 +1,20 @@
+# Individual Validation Run — Student B
+
+| ID | Item | Answer | Evidence | Where question came from |
+| :--- | :--- | :--- | :--- | :--- |
+| **CL-001** | Does each requirement contain only one “shall” or “may” statement? | No | R-07 combines "may cancel", "shall update", and "notify" in one item. | Rule: Clear |
+| **CL-002** | Is every requirement free of undefined vague words (e.g. “quickly”, “user-friendly”, “securely”, “normal”, “policy”)? | No | R-02, R-08, R-09, R-12, R-13 all use undefined subjective terms. | Rule: Clear |
+| **CL-003** | Does every speed or time requirement state a number and a unit? | No | R-02 ("quickly"), R-06 ("before"), and R-12 ("normal working hours") lack numbers. | Rule: Testable |
+| **CL-004** | Could a pass/fail test be written for every requirement? | No | R-02, R-08, R-09, and R-13 lack measurable pass/fail acceptance criteria. | Rule: Testable |
+| **CL-005** | Are all requirements free of direct contradictions regarding appointment durations? | No | R-04 mandates 15 minutes while R-05 allows doctors to set 10–30 minutes. | Rule: Free of contradictions |
+| **CL-006** | Does the document state the exact lead time before an appointment when reminders are sent? | No | R-06 omits the exact timing (e.g., 24 hours prior) and delivery channel. | Risk: Missed appointments |
+| **CL-007** | Does the document define the minimum cancellation notice required before an appointment starts? | No (?) | R-07 says "at any time", which permits cancellation 1 minute before the visit. | Risk: Last-minute empty slots |
+| **CL-008** | Does the document specify how simultaneous booking requests for the same slot are resolved? | No | R-03 states the goal ("prevent double bookings") but omits concurrency rules. | Risk: Double booking concurrency |
+| **CL-009** | Does the document state the minimum number of concurrent users supported during peak Monday morning hours? | No | R-02 and R-12 provide no throughput or concurrent user targets. | Risk: Peak load crash |
+| **CL-010** | Does the document specify the exact encryption standard for storing medical records? | No | R-09 lacks encryption specifications (e.g., AES-256 at rest, TLS in transit). | Risk: Data breach / DPO |
+| **CL-011** | Does the document specify accessibility standards (such as minimum font size or screen-reader support) for elderly users? | No | R-08 has no concrete accessibility criteria (such as WCAG compliance). | User: Patient (Elderly) |
+| **CL-012** | Does the document state how emergency walk-in patients are prioritized over standard bookings? | No | R-10 treats walk-ins like normal bookings with no emergency slot handling. | User: Receptionist |
+| **CL-013** | Does the document allow doctors to block off unavailable time slots on their schedules? | No | R-14 provides read-only schedule viewing without leave or break management. | User: Doctor |
+| **CL-014** | Does the document allow the clinic administrator to configure clinic working hours? | No (?) | R-12 references working hours, but no requirement covers admin settings. | User: Clinic administrator |
+| **CL-015** | Does the document specify which user roles are permitted to view patient medical records? | No | R-09 omits role-based access rules for doctors, receptionists, and admins. | User: Data protection officer |
+| **CL-016** | Does the document define the exact system behavior when a patient attempts to book a fourth active appointment? | No | R-11 caps active bookings at 3 without defining error messages or overrides. | Rule: Complete |
