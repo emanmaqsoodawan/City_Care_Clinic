@@ -7,7 +7,7 @@
 | **CL-003** | Does every speed or time requirement state a number and a unit? | No | R-02 ("quickly"), R-06 ("before"), and R-12 ("normal working hours") lack numbers. | Rule: Testable |
 | **CL-004** | Could a pass/fail test be written for every requirement? | No | R-02, R-08, R-09, and R-13 lack measurable pass/fail acceptance criteria. | Rule: Testable |
 | **CL-005** | Are all requirements free of direct contradictions regarding appointment durations? | No | R-04 mandates 15 minutes while R-05 allows doctors to set 10–30 minutes. | Rule: Free of contradictions |
-| **CL-006** | Does the document state the exact lead time before an appointment when reminders are sent? | No | R-06 omits the exact timing (e.g., 24 hours prior) and delivery channel. | Risk: Missed appointments |
+| **CL-006** | Does the document state the exact lead time before an appointment when reminders are sent? | No | R-06 omits the exact timing (e.g., 24 hours prior) and delivery channel. | Rule: Complete / Risk: Missed appointments |
 | **CL-007** | Does the document define the minimum cancellation notice required before an appointment starts? | No (?) | R-07 says "at any time", which permits cancellation 1 minute before the visit. | Risk: Last-minute empty slots |
 | **CL-008** | Does the document specify how simultaneous booking requests for the same slot are resolved? | No | R-03 states the goal ("prevent double bookings") but omits concurrency rules. | Risk: Double booking concurrency |
 | **CL-009** | Does the document state the minimum number of concurrent users supported during peak Monday morning hours? | No | R-02 and R-12 provide no throughput or concurrent user targets. | Risk: Peak load crash |
